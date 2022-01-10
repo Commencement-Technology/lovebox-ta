@@ -1,0 +1,24 @@
+type User @cacheControl(maxAge: 50){
+  email: EmailAddress!
+  password: String!
+  joinDate: String! @cacheControl(maxAge: 0)
+  username: String!
+  id: ID!
+}
+
+type Query {
+  users: [User]
+  user(email: EmailAddress!): User
+  me: User
+}
+
+input userDTO {
+  email: EmailAddress!
+  password: String!
+  username: String!
+}
+
+type Mutation {
+  register(user: userDTO): Boolean
+  login(email: EmailAddress!, password: String!): String!
+}

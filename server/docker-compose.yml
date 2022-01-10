@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+    lovebox-server:
+        container_name: lovebox-server
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+          - .:/lovebox-server
+          - /lovebox-server/node_modules
+        depends_on:
+            - redis
+        ports:
+            - ${SERVER_PORT}:${SERVER_PORT}
+        command: npm run dev
+        env_file: 
+            - .env
+        networks:
+            - lovebox-network
+        restart: unless-stopped
+
+    redis: 
+        image: redis:6.2.6
+        container_name: redis
+        ports:
+          - ${REDIS_PORT}:${REDIS_PORT}
+        networks:
+            - lovebox-network
+
+networks:
+    lovebox-network:

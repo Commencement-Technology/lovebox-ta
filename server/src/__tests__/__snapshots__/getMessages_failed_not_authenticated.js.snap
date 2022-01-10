@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get messages without token Should return error not allowed to access the resource 1`] = `
+Object {
+  "data": Object {
+    "messages": null,
+  },
+  "errors": Array [
+    [GraphQLError: Your not allowed to access this resource],
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

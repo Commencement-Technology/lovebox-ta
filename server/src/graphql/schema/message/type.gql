@@ -1,0 +1,14 @@
+type Message {
+  id: ID! @cacheControl(maxAge: 0)
+  photoUrl: String @cacheControl(maxAge: 250),
+  createdAt: String @cacheControl(maxAge: 0)
+}
+
+extend type Query {
+  messages: [Message]
+  message(id: ID!): Message
+}
+
+extend type Mutation {
+  addMessage(photo: Upload!): Boolean
+}
