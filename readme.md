@@ -5,12 +5,12 @@ Using **React Native, Nodejs, GraphQL with Apollo Express Server**
 
 ### Description
 
-<img src="./visual/welcome.jpg">
-<img src="./visual/signup.jpg">
-<img src="./visual/signin.jpg">
-<img src="./visual/send_message.jpg">
-<img src="./visual/send_message_waiting.jpg">
-<img src="./visual/messages.jpg">
+<img src="./visual/welcome.jpg" width="100" height="185">
+<img src="./visual/signup.jpg" width="100" height="185">
+<img src="./visual/signin.jpg" width="100" height="185">
+<img src="./visual/send_message.jpg" width="100" height="185">
+<img src="./visual/send_message_waiting.jpg" width="100" height="185">
+<img src="./visual/messages.jpg" width="100" height="185">
 
 ### Requirements
 ##### Backend Nodejs
@@ -33,8 +33,8 @@ Not completed
 
 ### Launch the GraphQL server
 To launch the backend just run : 
-`npm run build:dev`
-  `npm run dev`
+  - `npm run build:dev` 
+  - `npm run dev`
 Your server will listen on http://localhost:4002
 
 ### Launch the React Native App
