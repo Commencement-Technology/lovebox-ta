@@ -1,27 +1,57 @@
-# React Native & Apollo usecase
+# Lovebox TA
 
-`client/` contains the React Native code.
+Lovebox TA to send love messages and display the list of messages 
+Using **React Native, Nodejs, GraphQL with Apollo Express Server**
 
-`server/` contains the NodeJS server.
+### Description
 
-Connection between both is made using [Apollo](https://www.apollographql.com/docs/).
+<img src="./visual/welcome.jpg">
+<img src="./visual/signup.jpg">
+<img src="./visual/signin.jpg">
+<img src="./visual/send_message.jpg">
+<img src="./visual/send_message_waiting.jpg">
+<img src="./visual/messages.jpg">
 
-## Get started
-### Client
-- Install deps: `yarn`
-- Run metro bundler: `yarn start`
-- Run code on Android or iOS
+### Requirements
+##### Backend Nodejs
+- Install `Redis` and `Nodejs` on your system.
+- Install dependencies
+    `npm install`
+- Use the `.env.model`file to create a `.env` file to have your variables.
+##### React Native App
+- Install dependencies `yarn install`
+  
+##### Using docker
+Not completed
 
-### Server
-- Install deps: `yarn`
-- Compile and hot-reload: `yarn build:dev`
-- Run server: `yarn dev`
+## Features
 
-## Issues
-### Cant connect to GraphQL API 
-Replace `localhost` by your local IP in `client/app.tsx:49`
+- Register and login of the user
+- Send a photo message to the backend
+- get the list of messages (photos)
+## Build and execution
 
+### Launch the GraphQL server
+To launch the backend just run : 
+`npm run build:dev`
+  `npm run dev`
+Your server will listen on http://localhost:4002
 
-## Built with
-- [Apollo Boilerplate](https://github.com/CocoaWebStudio/apollo-server-boilerplate)
-- [Ignite Boilerplate](https://github.com/infinitered/ignite)
+### Launch the React Native App
+- Start the metro bundler: `yarn start`
+- Run on android: `yarn run android`
+
+### Launch the tests
+##### Server Side
+Just run : `npm run test`
+##### Client Side
+Not implemented
+
+## TODO
+
+- [ ] Add more tests case
+- [ ] Add server side input validation
+- [ ] Finish docker implementation
+- [ ] Add client side tests
+- [ ] Add jwt token headers in context (client side)
+- [ ] Use of Redux or MobX (Or more use of apollo cache)

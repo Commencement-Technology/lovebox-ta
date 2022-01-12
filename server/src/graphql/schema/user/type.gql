@@ -1,5 +1,5 @@
 type User @cacheControl(maxAge: 50){
-  email: EmailAddress!
+  email: String!
   password: String!
   joinDate: String! @cacheControl(maxAge: 0)
   username: String!
@@ -8,17 +8,17 @@ type User @cacheControl(maxAge: 50){
 
 type Query {
   users: [User]
-  user(email: EmailAddress!): User
+  user(email: String!): User
   me: User
 }
 
 input userDTO {
-  email: EmailAddress!
+  email: String!
   password: String!
   username: String!
 }
 
 type Mutation {
   register(user: userDTO): Boolean
-  login(email: EmailAddress!, password: String!): String!
+  login(email: String!, password: String!): String!
 }

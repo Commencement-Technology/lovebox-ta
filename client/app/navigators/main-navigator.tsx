@@ -4,9 +4,10 @@
  *
  * You'll likely spend most of your time in this file.
  */
-import React from "react"
-import { createStackNavigator } from "@react-navigation/stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import { WelcomeScreen, SignInScreen, SignUpScreen } from '../screens';
+import { BottomNavigator } from './bottom-navigator';
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -21,26 +22,28 @@ import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type PrimaryParamList = {
-  welcome: undefined
-  demo: undefined
-  demoList: undefined
-}
+    welcome: undefined;
+    signIn: undefined;
+    signUp: undefined;
+    homeNav: undefined;
+};
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
-const Stack = createStackNavigator<PrimaryParamList>()
+const Stack = createStackNavigator<PrimaryParamList>();
 
 export function MainNavigator() {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demo" component={DemoScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
-    </Stack.Navigator>
-  )
+    return (
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+            }}
+        >
+            <Stack.Screen name="welcome" component={WelcomeScreen} />
+            <Stack.Screen name="signIn" component={SignInScreen} />
+            <Stack.Screen name="signUp" component={SignUpScreen} />
+            <Stack.Screen name="homeNav" component={BottomNavigator} />
+        </Stack.Navigator>
+    );
 }
 
 /**
@@ -52,5 +55,5 @@ export function MainNavigator() {
  *
  * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
  */
-const exitRoutes = ["welcome"]
-export const canExit = (routeName: string) => exitRoutes.includes(routeName)
+const exitRoutes = ['welcome'];
+export const canExit = (routeName: string) => exitRoutes.includes(routeName);
