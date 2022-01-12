@@ -5,12 +5,14 @@ Using **React Native, Nodejs, GraphQL with Apollo Express Server**
 
 ### Description
 
-<img src="./visual/welcome.jpg" width="100" height="185">
-<img src="./visual/signup.jpg" width="100" height="185">
-<img src="./visual/signin.jpg" width="100" height="185">
-<img src="./visual/send_message.jpg" width="100" height="185">
-<img src="./visual/send_message_waiting.jpg" width="100" height="185">
-<img src="./visual/messages.jpg" width="100" height="185">
+<p>
+  <img src="./visual/welcome.jpg" width="100" height="185">
+  <img src="./visual/signup.jpg" width="100" height="185">
+  <img src="./visual/signin.jpg" width="100" height="185">
+  <img src="./visual/send_message.jpg" width="100" height="185">
+  <img src="./visual/send_message_waiting.jpg" width="100" height="185">
+  <img src="./visual/messages.jpg" width="100" height="185">
+</p>
 
 ### Requirements
 ##### Backend Nodejs
